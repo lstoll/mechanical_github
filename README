@@ -3,4 +3,9 @@
 This gem provides a automated API for working with github.
 
 == USAGE
-
+mg = MechanicalGitHub.new(username, password)
+	Will return a logged in object, which you can use to interact with GitHub. 
+	If you're using this often, you'll probably want to cache it.
+	
+mg.create_repository(name, description, homepage)
+	Will create a new repository for the logged in session.
