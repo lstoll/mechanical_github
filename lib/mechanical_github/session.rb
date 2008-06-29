@@ -23,30 +23,31 @@ module MechanicalGitHub
     end
   
     #
-    def create_repository(repository)
-      return nil unless @logged_in
+    def create_repository(name, description, homepage)
+      return unless @logged_in
       newpage = @agent.get('http://github.com/repositories/new')
       # create the repo
       newform  = newpage.forms[1]
       #p form
-      newform['repository[name]']    = repository.name
-      newform['repository[description]'] = repository.description
-      newform['repository[homepage]'] = repository.homepage
+      newform['repository[name]']    = name
+      newform['repository[description]'] = description
+      newform['repository[homepage]'] = homepage
       newform['repository[public]'] = true #always want it to be public
 
       finishpage  = @agent.submit(newform)
   
       # TODO - error handle here - regex for error or something. rtn the new repo if OK, nil if not.
+ 
+      Repository.new(self, name, @username, description, homepage)
     end
     
-    def get_repository(repository_name, username=@username)
-      return nil if username.nil?
-      repoin = Repository.new(repository_name, '', '', username)
-      repopage = @agent.get(repoin.url)
+    def find_repository(repository_name, username=@username)
+      return unless username
+      repopage = @agent.get(Repository.url_for(username, repository_name))
       description = repopage.search("//span[@id='repository_description']").inner_html
       homepage = repopage.search("//span[@id='repository_homepage']").inner_html
       # because the fields on a repo are currently immutable, we have to create a new repo and return
-      Repository.new(repository_name, description, homepage, username, self)
+      Repository.new(self, repository_name, username, description, homepage)
     end
     
     

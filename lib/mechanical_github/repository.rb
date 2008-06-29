@@ -4,7 +4,7 @@ module MechanicalGitHub
   class Repository
     attr_reader :name, :description, :homepage, :username
     
-    def initialize(name, description, homepage, username=nil, session=nil)
+    def initialize(session, name, username, description, homepage)
       @name = name
       @description = description
       @homepage = homepage
@@ -12,8 +12,8 @@ module MechanicalGitHub
       @session = session
     end
     
-    def url
-      "https://github.com/#{@username}/#{@name}"
+    def self.url_for(username, name)
+      "https://github.com/#{username}/#{name}"
     end
     
     def wiki
