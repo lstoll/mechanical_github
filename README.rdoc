@@ -1,6 +1,0 @@
-= mechanical_github
-
-This gem provides a automated API for working with github.
-
-== USAGE
-
