@@ -5,10 +5,10 @@ require 'date'
 
 GEM = "mechanical_github"
 GEM_VERSION = "0.0.1"
-AUTHOR = "Your Name"
-EMAIL = "Your Email"
-HOMEPAGE = "http://example.com"
-SUMMARY = "A gem that provides..."
+AUTHOR = "Lincoln Stoll"
+EMAIL = "lstoll@lstoll.net"
+HOMEPAGE = "http://github.com/lstoll/mechanical_github"
+SUMMARY = "A gem that provides a API to github"
 
 spec = Gem::Specification.new do |s|
   s.name = GEM
@@ -23,11 +23,11 @@ spec = Gem::Specification.new do |s|
   s.homepage = HOMEPAGE
   
   # Uncomment this to add a dependency
-  # s.add_dependency "foo"
+  s.add_dependency "mechanize"
   
   s.require_path = 'lib'
   s.autorequire = GEM
-  s.files = %w(LICENSE README Rakefile TODO) + Dir.glob("{lib,specs}/**/*")
+  s.files = %w(LICENSE README README Rakefile TODO) + Dir.glob("{lib,specs}/**/*")
 end
 
 Rake::GemPackageTask.new(spec) do |pkg|
@@ -37,6 +37,11 @@ end
 desc "install the gem locally"
 task :install => [:package] do
   sh %{sudo gem install pkg/#{GEM}-#{GEM_VERSION}}
+end
+
+desc "install the gem locally (without sudo)"
+task :install_without_sudo => [:package] do
+  sh %{gem install pkg/#{GEM}-#{GEM_VERSION}}
 end
 
 desc "create a gemspec file"
