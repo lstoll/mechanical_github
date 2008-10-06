@@ -49,7 +49,15 @@ module MechanicalGitHub
       # because the fields on a repo are currently immutable, we have to create a new repo and return
       Repository.new(self, repository_name, username, description, homepage)
     end
-    
-    
+
+    def send_message(to, subject, body)
+      return unless @logged_in
+      newpage = @agent.get('http://github.com/inbox/new')
+      newform = newpage.forms[1]
+      newform['message[to]']      = to
+      newform['message[subject]'] = subject
+      newform['message[body]']    = body
+      @agent.submit(newform)
+    end
   end
 end
