@@ -1,6 +1,10 @@
 = mechanical_github
 
-* http://drnic.github.com/mechanical_github
+* http://lstoll.net/mechanical_github
+
+== NOTE:
+
+The API Changed in ver 0.2.1 - Use MechanicalGithub rather than MechanicalGitHub
 
 == DESCRIPTION:
 
@@ -35,13 +39,13 @@ logged in username
 
 == INSTALL:
 
-* sudo gem install drnic-mechanical_github --source http://gems.github.com
+* sudo gem install lstoll-mechanical_github --source http://gems.github.com
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2008 Lincoln Stoll, lstoll@lstoll.net
+Copyright (c) 2008 Lincoln Stoll, lstoll@lstoll.net http://lstoll.net
 Copyright (c) 2009 Dr Nic Williams, http://mocra.com + http://drnicwilliams.com
 
 Permission is hereby granted, free of charge, to any person obtaining
