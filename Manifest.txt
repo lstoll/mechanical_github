@@ -1,9 +1,7 @@
 History.txt
 Manifest.txt
-PostInstall.txt
 README.rdoc
 Rakefile
-Rakefile.orig
 features/development.feature
 features/steps/common.rb
 features/steps/env.rb
@@ -11,7 +9,7 @@ lib/mechanical_github.rb
 lib/mechanical_github/repository.rb
 lib/mechanical_github/session.rb
 lib/mechanical_github/wiki.rb
-pkg/mechanical_github-0.0.1.gem
+mechanical_github.gemspec
 script/console
 script/destroy
 script/generate
