@@ -41,6 +41,7 @@ logged in username
 
 (The MIT License)
 
+Copyright (c) 2008 Lincoln Stoll, lstoll@lstoll.net
 Copyright (c) 2009 Dr Nic Williams, http://mocra.com + http://drnicwilliams.com
 
 Permission is hereby granted, free of charge, to any person obtaining
