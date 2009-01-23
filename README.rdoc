@@ -10,7 +10,7 @@ This gem provides a automated API for working with github.
 
 This will give you a session to work with.
 
-    sess = MechanicalGitHub::Session.new
+    sess = MechanicalGithub::Session.new
 
 Make the session logged in to github - needed for private repos or write
 operations.

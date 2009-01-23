@@ -1,4 +1,4 @@
-module MechanicalGitHub
+module MechanicalGithub
   class Session
     attr_reader :agent, :username, :logged_in
     
