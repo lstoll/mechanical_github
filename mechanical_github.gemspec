@@ -2,15 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mechanical_github}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dr Nic Williams", "Lincoln Stoll"]
   s.date = %q{2009-01-23}
   s.description = %q{This gem provides a automated API for working with github.}
   s.email = ["drnicwilliams@gmail.com", "lstoll@lstoll.net"]
-  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc"]
-  s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "Rakefile.orig", "features/development.feature", "features/steps/common.rb", "features/steps/env.rb", "lib/mechanical_github.rb", "lib/mechanical_github/repository.rb", "lib/mechanical_github/session.rb", "lib/mechanical_github/wiki.rb", "pkg/mechanical_github-0.0.1.gem", "script/console", "script/destroy", "script/generate", "spec/mechanical_github_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake"]
+  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.rdoc"]
+  s.files = ["History.txt", "Manifest.txt", "README.rdoc", "Rakefile", "features/development.feature", "features/steps/common.rb", "features/steps/env.rb", "lib/mechanical_github.rb", "lib/mechanical_github/repository.rb", "lib/mechanical_github/session.rb", "lib/mechanical_github/wiki.rb", "mechanical_github.gemspec", "script/console", "script/destroy", "script/generate", "spec/mechanical_github_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake"]
   s.has_rdoc = true
   s.homepage = %q{http://drnic.github.com/mechanical_github}
   s.rdoc_options = ["--main", "README.rdoc"]
